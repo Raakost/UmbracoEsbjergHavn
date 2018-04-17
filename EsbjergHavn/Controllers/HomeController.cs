@@ -14,16 +14,26 @@ namespace EsbjergHavn.Controllers
     public class HomeController : UmbracoApiController
     {
         private UmbracoHelper helper = new UmbracoHelper(UmbracoContext.Current);
-        public HomePageModel GetModel(string lang)
+
+        public HomePageModel GetHomePageModel(string lang)
         {
-            List<TabsContentModel> locationModels = new List<TabsContentModel>();
-
             var root = helper.TypedContentAtRoot().First(x => x.GetCulture().TwoLetterISOLanguageName == lang);
-
             var frontPage = root.Children.First(x => x.IsDocumentType("forside"));
+            var homePageModel = new HomePageModel
+            {
+                Id = frontPage.Id,
+                Img = frontPage.GetPropertyValue<IPublishedContent>("billede").Url.ToString(),        
+                Text = frontPage.GetPropertyValue<string>("beskrivelse"),
+                Title = frontPage.GetPropertyValue<string>("titel")
+            };
+            return homePageModel;
+        }
 
+        public List<TabsContentModel> GetContent(string lang)
+        {
+            var root = helper.TypedContentAtRoot().First(x => x.GetCulture().TwoLetterISOLanguageName == lang);
+            List<TabsContentModel> locationModels = new List<TabsContentModel>();
             var locationsFolder = root.Children.First(x => x.IsDocumentType("lokationer"));
-
             var locations = locationsFolder.Children;
 
             foreach (var location in locations)
@@ -44,7 +54,8 @@ namespace EsbjergHavn.Controllers
                         Latitude = location.GetPropertyValue<string>("breddegrad"),
                         Longtitude = location.GetPropertyValue<string>("laengdegrad")
                     },
-                    PastList = memories.Select(x => new PastPresentModel {
+                    PastList = memories.Select(x => new PastPresentModel
+                    {
                         Id = x.Id,
                         Img = x.GetPropertyValue<IPublishedContent>("billede").Url,
                         Text = x.GetPropertyValue<string>("beskrivelse"),
@@ -62,21 +73,8 @@ namespace EsbjergHavn.Controllers
                 };
                 locationModels.Add(locationModel);
             }
-            var homePageModel = new HomePageModel
-            {
-                Id = frontPage.Id,
-                Img = frontPage.GetPropertyValue<string>("billede"),
-                Locations = locationModels,
-                Text = frontPage.GetPropertyValue<string>("beskrivelse"),
-                Title = frontPage.GetPropertyValue<string>("titel")
-            };
-
-
-            
-
-            return homePageModel;
+            return locationModels;
         }
-
 
     }
 }

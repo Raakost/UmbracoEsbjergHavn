@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "8d8a44d9add6a59d")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ea1fbb27d546091d")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 
 // FILE: models.generated.cs
@@ -95,9 +95,9 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Beskrivelse
 		///</summary>
 		[ImplementPropertyType("beskrivelse")]
-		public IHtmlString Beskrivelse
+		public string Beskrivelse
 		{
-			get { return this.GetPropertyValue<IHtmlString>("beskrivelse"); }
+			get { return this.GetPropertyValue<string>("beskrivelse"); }
 		}
 
 		///<summary>
@@ -174,9 +174,9 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Beskrivelse
 		///</summary>
 		[ImplementPropertyType("beskrivelse")]
-		public IHtmlString Beskrivelse
+		public string Beskrivelse
 		{
-			get { return this.GetPropertyValue<IHtmlString>("beskrivelse"); }
+			get { return this.GetPropertyValue<string>("beskrivelse"); }
 		}
 
 		///<summary>
@@ -245,9 +245,9 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Beskrivelse
 		///</summary>
 		[ImplementPropertyType("beskrivelse")]
-		public IHtmlString Beskrivelse
+		public string Beskrivelse
 		{
-			get { return this.GetPropertyValue<IHtmlString>("beskrivelse"); }
+			get { return this.GetPropertyValue<string>("beskrivelse"); }
 		}
 
 		///<summary>
@@ -307,9 +307,9 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Beskrivelse
 		///</summary>
 		[ImplementPropertyType("beskrivelse")]
-		public IHtmlString Beskrivelse
+		public string Beskrivelse
 		{
-			get { return this.GetPropertyValue<IHtmlString>("beskrivelse"); }
+			get { return this.GetPropertyValue<string>("beskrivelse"); }
 		}
 
 		///<summary>
