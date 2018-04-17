@@ -45,6 +45,7 @@ namespace EsbjergHavn.Controllers
                 var locationModel = new TabsContentModel
                 {
                     Id = location.Id,
+                    Title = location.GetPropertyValue<string>("titel"),
                     HomePage = new TabsHomePageModel
                     {
                         Id = location.Id,

@@ -8,6 +8,7 @@ namespace EsbjergHavn.Models
     public class TabsContentModel
     {
         public int Id { get; set; }
+        public string Title { get; set; } 
         public TabsHomePageModel HomePage { get; set; }
         public List<PastPresentModel> PresentList { get; set; }
         public List<PastPresentModel> PastList { get; set; }

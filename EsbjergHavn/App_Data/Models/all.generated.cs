@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ea1fbb27d546091d")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "acd45c2e72df0b04")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
 // FILE: models.generated.cs
@@ -213,6 +213,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public IPublishedContent NuBillede
 		{
 			get { return this.GetPropertyValue<IPublishedContent>("nuBillede"); }
+		}
+
+		///<summary>
+		/// Titel
+		///</summary>
+		[ImplementPropertyType("titel")]
+		public string Titel
+		{
+			get { return this.GetPropertyValue<string>("titel"); }
 		}
 	}
 
