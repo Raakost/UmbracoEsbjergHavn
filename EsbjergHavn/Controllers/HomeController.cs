@@ -60,7 +60,7 @@ namespace EsbjergHavn.Controllers
                         Id = x.Id,
                         Img = "http://localhost:52076" + x.GetPropertyValue<IPublishedContent>("billede").Url,
                         Text = x.GetPropertyValue<string>("beskrivelse"),
-                        Title = x.GetPropertyValue<string>("title"),
+                        Title = x.GetPropertyValue<string>("titel"),
                         Video = x.GetPropertyValue<string>("videoLink")
                     }).ToList(),
                     PresentList = histories.Select(x => new PastPresentModel
@@ -68,7 +68,7 @@ namespace EsbjergHavn.Controllers
                         Id = x.Id,
                         Img = "http://localhost:52076" + x.GetPropertyValue<IPublishedContent>("billede").Url,
                         Text = x.GetPropertyValue<string>("beskrivelse"),
-                        Title = x.GetPropertyValue<string>("title"),
+                        Title = x.GetPropertyValue<string>("titel"),
                         Video = x.GetPropertyValue<string>("videoLink")
                     }).ToList()
                 };
