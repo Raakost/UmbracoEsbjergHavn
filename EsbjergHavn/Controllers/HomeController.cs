@@ -22,7 +22,7 @@ namespace EsbjergHavn.Controllers
             var homePageModel = new HomePageModel
             {
                 Id = frontPage.Id,
-                Img = frontPage.GetPropertyValue<IPublishedContent>("billede").Url.ToString(),        
+                Img = "http://localhost:52076" + frontPage.GetPropertyValue<IPublishedContent>("billede").Url.ToString(),        
                 Text = frontPage.GetPropertyValue<string>("beskrivelse"),
                 Title = frontPage.GetPropertyValue<string>("titel")
             };
@@ -49,8 +49,8 @@ namespace EsbjergHavn.Controllers
                     HomePage = new TabsHomePageModel
                     {
                         Id = location.Id,
-                        BeforeImg = location.GetPropertyValue<IPublishedContent>("foerBillede").Url,
-                        NowImg = location.GetPropertyValue<IPublishedContent>("nuBillede").Url,
+                        BeforeImg = "http://localhost:52076" + location.GetPropertyValue<IPublishedContent>("foerBillede").Url,
+                        NowImg = "http://localhost:52076" + location.GetPropertyValue<IPublishedContent>("nuBillede").Url,
                         Text = location.GetPropertyValue<string>("beskrivelse"),
                         Latitude = location.GetPropertyValue<string>("breddegrad"),
                         Longtitude = location.GetPropertyValue<string>("laengdegrad")
@@ -58,7 +58,7 @@ namespace EsbjergHavn.Controllers
                     PastList = memories.Select(x => new PastPresentModel
                     {
                         Id = x.Id,
-                        Img = x.GetPropertyValue<IPublishedContent>("billede").Url,
+                        Img = "http://localhost:52076" + x.GetPropertyValue<IPublishedContent>("billede").Url,
                         Text = x.GetPropertyValue<string>("beskrivelse"),
                         Title = x.GetPropertyValue<string>("title"),
                         Video = x.GetPropertyValue<string>("videoLink")
@@ -66,7 +66,7 @@ namespace EsbjergHavn.Controllers
                     PresentList = histories.Select(x => new PastPresentModel
                     {
                         Id = x.Id,
-                        Img = x.GetPropertyValue<IPublishedContent>("billede").Url,
+                        Img = "http://localhost:52076" + x.GetPropertyValue<IPublishedContent>("billede").Url,
                         Text = x.GetPropertyValue<string>("beskrivelse"),
                         Title = x.GetPropertyValue<string>("title"),
                         Video = x.GetPropertyValue<string>("videoLink")
