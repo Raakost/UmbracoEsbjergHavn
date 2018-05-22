@@ -22,7 +22,7 @@ namespace EsbjergHavn.Controllers
             var homePageModel = new HomePageModel
             {
                 Id = frontPage.Id,
-                Img = "http://havnen.samrum.dk" + frontPage.GetPropertyValue<IPublishedContent>("billede").Url.ToString(),        
+                Img = "http://havnen.samrum.dk" + frontPage.GetPropertyValue<IPublishedContent>("billede").Url.ToString(),
                 Text = frontPage.GetPropertyValue<string>("beskrivelse"),
                 Title = frontPage.GetPropertyValue<string>("titel")
             };
@@ -70,8 +70,10 @@ namespace EsbjergHavn.Controllers
                         Text = x.GetPropertyValue<string>("beskrivelse"),
                         Title = x.GetPropertyValue<string>("titel"),
                         Video = x.GetPropertyValue<string>("videoLink")
-                    }).ToList()
+                    }).ToList(),
+                    Map = "http://havnen.samrum.dk" + location.GetPropertyValue<IPublishedContent>("oversigtskort").Url
                 };
+
                 locationModels.Add(locationModel);
             }
             return locationModels;
