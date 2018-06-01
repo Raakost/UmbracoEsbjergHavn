@@ -12,6 +12,6 @@ namespace EsbjergHavn.Models
         public TabsHomePageModel HomePage { get; set; }
         public List<PastPresentModel> PresentList { get; set; }
         public List<PastPresentModel> PastList { get; set; }
-        public string Map { get; set; }
+        public MapPageModel Map { get; set; }
     }
 }

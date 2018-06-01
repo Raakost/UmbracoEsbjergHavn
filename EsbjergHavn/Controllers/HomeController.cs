@@ -39,8 +39,9 @@ namespace EsbjergHavn.Controllers
             foreach (var location in locations)
             {
                 var memories = location.Children.First(x => x.IsDocumentType("erindringer")).Children;
-
                 var histories = location.Children.First(x => x.IsDocumentType("historier")).Children;
+                var map = location.Children.First(x => x.IsDocumentType("oversigtskort"));
+
 
                 var locationModel = new TabsContentModel
                 {
@@ -71,7 +72,11 @@ namespace EsbjergHavn.Controllers
                         Title = x.GetPropertyValue<string>("titel"),
                         Video = x.GetPropertyValue<string>("videoLink")
                     }).ToList(),
-                    Map = "http://havnen.samrum.dk" + location.GetPropertyValue<IPublishedContent>("oversigtskort").Url
+                    Map = new MapPageModel
+                    {
+                        Id = location.Id,   
+                        Map = "http://havnen.samrum.dk" + map.GetPropertyValue<IPublishedContent>("kort").Url
+                    }
                 };
 
                 locationModels.Add(locationModel);
