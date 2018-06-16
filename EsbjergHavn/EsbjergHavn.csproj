@@ -259,6 +259,12 @@
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
     <Content Include="Css\main.css" />
     <Content Include="Css\twentytwenty.css" />
+    <Content Include="Media\1001\evnddleb.jpg" />
+    <Content Include="Media\1002\esbjerghavn.jpg" />
+    <Content Include="Media\1002\esbjerghavn_thumb.jpg" />
+    <Content Include="Media\1003\luftfoto-holstebro-struer-havn.jpg" />
+    <Content Include="Media\1004\taarbaekhavn.jpg" />
+    <Content Include="Media\1005\kort.png" />
     <Content Include="Media\Web.config" />
     <Content Include="config\umbracoSettings.config" />
     <Content Include="config\trees.config" />
