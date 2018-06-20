@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "f31f1e3e1c55e29a")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "97f7243eacc6967a")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -251,7 +251,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Beskrivelse
+		/// Beskrivelse: Både billed beskrivelse på erindring og oversigtskort.
 		///</summary>
 		[ImplementPropertyType("beskrivelse")]
 		public string Beskrivelse
@@ -269,7 +269,25 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Titel
+		/// Breddegrad
+		///</summary>
+		[ImplementPropertyType("breddegrad")]
+		public string Breddegrad
+		{
+			get { return this.GetPropertyValue<string>("breddegrad"); }
+		}
+
+		///<summary>
+		/// Længdegrad
+		///</summary>
+		[ImplementPropertyType("laengdegrad")]
+		public string Laengdegrad
+		{
+			get { return this.GetPropertyValue<string>("laengdegrad"); }
+		}
+
+		///<summary>
+		/// Titel: Titel på lokationen på oversigtskortet.
 		///</summary>
 		[ImplementPropertyType("titel")]
 		public string Titel
@@ -313,7 +331,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Beskrivelse
+		/// Beskrivelse: Både billed beskrivelse på historie og oversigtskort.
 		///</summary>
 		[ImplementPropertyType("beskrivelse")]
 		public string Beskrivelse
@@ -331,7 +349,25 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Titel
+		/// Breddegrad
+		///</summary>
+		[ImplementPropertyType("breddegrad")]
+		public string Breddegrad
+		{
+			get { return this.GetPropertyValue<string>("breddegrad"); }
+		}
+
+		///<summary>
+		/// Længdegrad
+		///</summary>
+		[ImplementPropertyType("laengdegrad")]
+		public string Laengdegrad
+		{
+			get { return this.GetPropertyValue<string>("laengdegrad"); }
+		}
+
+		///<summary>
+		/// Titel: Titel på lokationen på oversigtskortet.
 		///</summary>
 		[ImplementPropertyType("titel")]
 		public string Titel

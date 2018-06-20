@@ -22,7 +22,7 @@ namespace EsbjergHavn.Controllers
             var homePageModel = new HomePageModel
             {
                 Id = frontPage.Id,
-                Img = "http://havnen.samrum.dk" + frontPage.GetPropertyValue<IPublishedContent>("billede").Url.ToString(),
+                Img = "http://havnen150.dk" + frontPage.GetPropertyValue<IPublishedContent>("billede").Url.ToString(),
                 Text = frontPage.GetPropertyValue<string>("beskrivelse"),
                 Title = frontPage.GetPropertyValue<string>("titel")
             };
@@ -38,8 +38,8 @@ namespace EsbjergHavn.Controllers
 
             foreach (var location in locations)
             {
-                var memories = location.Children.First(x => x.IsDocumentType("erindringer")).Children;
-                var histories = location.Children.First(x => x.IsDocumentType("historier")).Children;
+                var memories = location.Children.First(x => x.IsDocumentType("erindringer")).Children; //Nutid
+                var histories = location.Children.First(x => x.IsDocumentType("historier")).Children;  //Fortid
                 var map = location.Children.First(x => x.IsDocumentType("oversigtskort"));
 
 
@@ -50,32 +50,36 @@ namespace EsbjergHavn.Controllers
                     HomePage = new TabsHomePageModel
                     {
                         Id = location.Id,
-                        BeforeImg = "http://havnen.samrum.dk" + location.GetPropertyValue<IPublishedContent>("foerBillede").Url,
-                        NowImg = "http://havnen.samrum.dk" + location.GetPropertyValue<IPublishedContent>("nuBillede").Url,
+                        BeforeImg = "http://havnen150.dk" + location.GetPropertyValue<IPublishedContent>("foerBillede").Url,
+                        NowImg = "http://havnen150.dk" + location.GetPropertyValue<IPublishedContent>("nuBillede").Url,
                         Text = location.GetPropertyValue<string>("beskrivelse"),
                         Latitude = location.GetPropertyValue<string>("breddegrad"),
                         Longtitude = location.GetPropertyValue<string>("laengdegrad")
                     },
-                    PastList = memories.Select(x => new PastPresentModel
+                    PastList = histories.Select(x => new PastPresentModel
                     {
                         Id = x.Id,
-                        Img = "http://havnen.samrum.dk" + x.GetPropertyValue<IPublishedContent>("billede").Url,
+                        Img = "http://havnen150.dk" + x.GetPropertyValue<IPublishedContent>("billede").Url,
                         Text = x.GetPropertyValue<string>("beskrivelse"),
                         Title = x.GetPropertyValue<string>("titel"),
-                        Video = x.GetPropertyValue<string>("videoLink")
+                        Video = x.GetPropertyValue<string>("videoLink"),
+                        Latitude = x.HasProperty("breddegrad") ? x.GetPropertyValue<string>("breddegrad") : "",
+                        Longitude = x.HasProperty("laengdegrad") ? x.GetPropertyValue<string>("laengdegrad") : ""
                     }).ToList(),
-                    PresentList = histories.Select(x => new PastPresentModel
+                    PresentList = memories.Select(x => new PastPresentModel
                     {
                         Id = x.Id,
-                        Img = "http://havnen.samrum.dk" + x.GetPropertyValue<IPublishedContent>("billede").Url,
+                        Img = "http://havnen150.dk" + x.GetPropertyValue<IPublishedContent>("billede").Url,
                         Text = x.GetPropertyValue<string>("beskrivelse"),
                         Title = x.GetPropertyValue<string>("titel"),
-                        Video = x.GetPropertyValue<string>("videoLink")
+                        Video = x.GetPropertyValue<string>("videoLink"),
+                        Latitude = x.HasProperty("breddegrad") ? x.GetPropertyValue<string>("breddegrad") : "",
+                        Longitude = x.HasProperty("laengdegrad") ? x.GetPropertyValue<string>("laengdegrad") : ""
                     }).ToList(),
                     Map = new MapPageModel
                     {
                         Id = location.Id,   
-                        Map = "http://havnen.samrum.dk" + map.GetPropertyValue<IPublishedContent>("kort").Url
+                        Map = "http://havnen150.dk" + map.GetPropertyValue<IPublishedContent>("kort").Url
                     }
                 };
 

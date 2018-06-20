@@ -253,6 +253,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Fonts\ionicons.svg" />
+    <Content Include="Assets\icon\da.png" />
+    <Content Include="Assets\icon\daEn.png" />
+    <Content Include="Assets\icon\en.png" />
+    <Content Include="Assets\icon\enDa.png" />
+    <Content Include="Assets\icon\favicon.ico" />
+    <Content Include="Assets\icon\map-location.png" />
     <Content Include="config\imageprocessor\security.config" />
     <Content Include="config\imageprocessor\processing.config" />
     <Content Include="config\imageprocessor\cache.config" />
@@ -307,6 +313,8 @@
     <Content Include="Assets\Fonts\roboto-regular.woff" />
     <Content Include="Assets\Fonts\roboto-regular.woff2" />
     <Content Include="Assets\Fonts\roboto.scss" />
+    <Content Include="Assets\i18n\da.json" />
+    <Content Include="Assets\i18n\en.json" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\jquery.event.move.js" />
@@ -326,6 +334,9 @@
     <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\havnen150.dk - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\havnen150.dk - Web Deploy.pubxml" />
+    <Content Include="Views\index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
