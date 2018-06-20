@@ -12,6 +12,6 @@ namespace EsbjergHavn.Models
         public string BeforeImg { get; set; }
         public string NowImg { get; set; }
         public string Latitude { get; set; }
-        public string Longtitude { get; set; }
+        public string Longitude { get; set; }
     }
 }

@@ -54,7 +54,7 @@ namespace EsbjergHavn.Controllers
                         NowImg = "http://havnen150.dk" + location.GetPropertyValue<IPublishedContent>("nuBillede").Url,
                         Text = location.GetPropertyValue<string>("beskrivelse"),
                         Latitude = location.GetPropertyValue<string>("breddegrad"),
-                        Longtitude = location.GetPropertyValue<string>("laengdegrad")
+                        Longitude = location.GetPropertyValue<string>("laengdegrad")
                     },
                     PastList = histories.Select(x => new PastPresentModel
                     {
