@@ -82,7 +82,7 @@ var SettingsPage = /** @class */ (function () {
     };
     SettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-settings',template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\settings\settings.html"*/'<ion-list>\n\n  <button ion-item (click)="changeLanguage(\'da\')">\n\n    <img style="width: 1em;" src="assets/icon/da.png">\n\n    {{\'DA\' | translate}}\n\n  </button>\n\n    <button ion-item (click)="changeLanguage(\'en\')">\n\n      <img style="width: 1em;" src="assets/icon/en.png">\n\n      {{\'EN\' | translate}}\n\n    </button>\n\n</ion-list>\n\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\settings\settings.html"*/,
+            selector: 'page-settings',template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\settings\settings.html"*/'<!--<ion-list>\n  <button ion-item (click)="changeLanguage(\'da\')">\n    <img style="width: 1em;" src="assets/icon/da.png">\n    {{\'DA\' | translate}}\n  </button>\n    <button ion-item (click)="changeLanguage(\'en\')">\n      <img style="width: 1em;" src="assets/icon/en.png">\n      {{\'EN\' | translate}}\n    </button>\n</ion-list>-->\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\settings\settings.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */]])
     ], SettingsPage);
@@ -121,7 +121,7 @@ var TabContentPage = /** @class */ (function () {
     };
     TabContentPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tab-content',template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tab-content\tab-content.html"*/'<!-- Page Header -->\n\n<ion-header>\n\n</ion-header>\n\n\n\n<!-- Page Content -->\n\n<ion-content padding>\n\n  <ion-card *ngFor="let item of tabContent" style="border-radius:2px;">\n\n    <img src="{{item.Img}}"/>\n\n    <ion-card-content>\n\n      <!--<ion-card-title>{{item.Title}}</ion-card-title>-->\n\n      <p>{{item.Text}}</p>\n\n      <div *ngIf="item.Video">\n\n        <a href="{{item.Video}}">{{\'VIDEO-LINK\' | translate}}</a>\n\n      </div>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card style="box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);">\n\n    <button color="dark-blue" hidden ion-button full>Klik her for at se hele interviewet!</button>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tab-content\tab-content.html"*/,
+            selector: 'page-tab-content',template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tab-content\tab-content.html"*/'<!-- Page Header -->\n<ion-header>\n</ion-header>\n\n<!-- Page Content -->\n<ion-content padding class="bg">\n  <ion-card *ngFor="let item of tabContent" style="border-radius:2px;">\n    <img src="{{item.Img}}"/>\n    <ion-card-content>\n      <ion-card-title>{{item.Title}}</ion-card-title>\n      <p style="font-family: Roboto;!important;">{{item.Text}}</p>\n      <div *ngIf="item.Video">\n        <a href="{{item.Video}}">{{\'VIDEO-LINK\' | translate}}</a>\n      </div>\n    </ion-card-content>\n  </ion-card>\n  <ion-card style="box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);">\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tab-content\tab-content.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], TabContentPage);
@@ -136,87 +136,10 @@ var TabContentPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabMapPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__ = __webpack_require__(217);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var TabMapPage = /** @class */ (function () {
-    function TabMapPage(navParams, googleMaps, plt, nav) {
-        this.navParams = navParams;
-        this.googleMaps = googleMaps;
-        this.plt = plt;
-        this.nav = nav;
-        this.mapUrl = undefined;
-        this.mapUrl = navParams.data;
-        console.log(this.mapUrl);
-    }
-    TabMapPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TabMapPage');
-    };
-    TabMapPage.prototype.ngAfterViewInit = function () {
-        var _this = this;
-        this.plt.ready().then(function () {
-            _this.initMap();
-        });
-    };
-    TabMapPage.prototype.initMap = function () {
-        var map = this.googleMaps.create(this.element.nativeElement);
-        map.one(__WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["b" /* GoogleMapsEvent */].MAP_READY).then(function (data) {
-            var coordinates = new __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["c" /* LatLng */](33.6396965, -84.4304574);
-            var position = {
-                target: coordinates,
-                zoom: 17
-            };
-            map.animateCamera(position);
-            var markerOptions = {
-                position: coordinates,
-                icon: "assets/images/icons8-Marker-64.png",
-                title: 'Our first POI'
-            };
-            var marker = map.addMarker(markerOptions)
-                .then(function (marker) {
-                marker.showInfoWindow();
-            });
-        });
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_8" /* ViewChild */])('map'),
-        __metadata("design:type", Object)
-    ], TabMapPage.prototype, "element", void 0);
-    TabMapPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-tab-map',template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tab-map\tab-map.html"*/'<!--<ion-content padding>\n<img src="https://www.dropbox.com/s/9jtqkcl6gmc4m9h/kort.PNG?dl=1"/>\n  <div style="padding: 0px;" *ngIf="mapUrl">\n    <img src={{mapUrl.Map}}>\n  </div>\n</ion-content>-->\n<ion-content>\n  <div #map style="height:100%;"></div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tab-map\tab-map.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["a" /* GoogleMaps */], __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["f" /* NavController */]])
-    ], TabMapPage);
-    return TabMapPage;
-}());
-
-//# sourceMappingURL=tab-map.js.map
-
-/***/ }),
-
-/***/ 161:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabHomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_launch_navigator__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_launch_navigator__ = __webpack_require__(217);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -248,14 +171,14 @@ var TabHomePage = /** @class */ (function () {
         console.log('ionViewDidLoad TabHomePage');
     };
     TabHomePage.prototype.Navigation = function () {
-        var lat = 55.4666;
-        var long = 8.4615;
-        var havneCoords = lat.toString() + ", " + long.toString();
+        var lat = this.tabHomeContent.Latitude;
+        var long = this.tabHomeContent.Longitude;
+        var havneCoords = lat + "," + long;
         this.launchNavigator.navigate(havneCoords);
     };
     TabHomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tab-home',template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tab-home\tab-home.html"*/'<!-- Page Header -->\n\n<ion-header>\n\n\n\n</ion-header>\n\n\n\n<!-- Page content -->\n\n<ion-content class="no-padding" *ngIf="tabHomeContent">\n\n  <div class="img-container">\n\n  <div id="container1" class="twentytwenty-container">\n\n    <img (load)="initTwenty()" src={{tabHomeContent.BeforeImg}}>\n\n    <img (load)="initTwenty()" src={{tabHomeContent.NowImg}}>\n\n    </div>\n\n  </div>\n\n  <p style="padding-right: 16px; padding-left: 16px;">{{tabHomeContent.Text}}</p>\n\n  <div>\n\n    <button style="background-color: transparent;\n\n                   text-decoration: underline;\n\n                   color: #488aff;\n\n                   line-height: 1.5;\n\n                   font-size: 1.5rem;\n\n                   float: right;\n\n                   padding-right: 16px;"\n\n            (click)="Navigation()">{{\'DIRECTIONS\' | translate}}</button>\n\n    <ion-icon style="float: right;\n\n                     line-height: 1.5;\n\n                     text-decoration: underline;\n\n                     color: #488aff;"\n\n              name="map"></ion-icon>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tab-home\tab-home.html"*/,
+            selector: 'page-tab-home',template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tab-home\tab-home.html"*/'<!-- Page Header -->\n<ion-header>\n\n</ion-header>\n\n<!-- Page content -->\n<ion-content class="no-padding bg" *ngIf="tabHomeContent">\n  <div class="img-container">\n  <div id="container1" class="twentytwenty-container">\n    <img (load)="initTwenty()" src={{tabHomeContent.BeforeImg}}>\n    <img (load)="initTwenty()" src={{tabHomeContent.NowImg}}>\n    </div>\n  </div>\n  <p style="padding-right: 16px; padding-left: 16px; font-family: Roboto!important; margin-bottom:50px;">{{tabHomeContent.Text}}</p>\n <!-- <div style="float: right;">\n    <button ion-button (click)="Navigation()">{{\'DIRECTIONS\' | translate}}</button>\n  </div>-->\n  <ion-fab bottom right>\n    <button style="font-family: Coda;" (click)="Navigation()" ion-fab color="med-blue">{{\'DIRECTIONS\' | translate}}</button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tab-home\tab-home.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_launch_navigator__["a" /* LaunchNavigator */]])
@@ -267,6 +190,116 @@ var TabHomePage = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 161:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabMapPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__ = __webpack_require__(220);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var TabMapPage = /** @class */ (function () {
+    function TabMapPage(navParams, googleMaps, plt, nav) {
+        this.navParams = navParams;
+        this.googleMaps = googleMaps;
+        this.plt = plt;
+        this.nav = nav;
+        this.map = navParams.data;
+    }
+    TabMapPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TabMapPage');
+    };
+    TabMapPage.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        this.plt.ready().then(function () {
+            _this.initMap();
+        });
+    };
+    TabMapPage.prototype.initMap = function () {
+        var _this = this;
+        var map = this.googleMaps.create(this.element.nativeElement);
+        map.one(__WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["b" /* GoogleMapsEvent */].MAP_READY).then(function (data) {
+            var coordinates = _this.map.Markers.map(function (item) {
+                return new __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["d" /* LatLng */](parseFloat(item.Latitude), parseFloat(item.Longitude));
+            });
+            var bounds = new __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["e" /* LatLngBounds */](coordinates);
+            var mapElement = _this.element;
+            var mapDimensions = {
+                height: mapElement.offsetHeight,
+                width: mapElement.offsetWidth
+            };
+            var initialPosition = {
+                target: new __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["d" /* LatLng */](56.222017, 9.212361),
+                zoom: 17
+            };
+            map.moveCamera(initialPosition);
+            var boundsPosition = {
+                target: bounds,
+                tilt: 0,
+                duration: 100
+            };
+            map.animateCamera(boundsPosition).then(function () { return map.setCameraZoom(map.getCameraZoom() - 1); });
+            var _loop_1 = function (marker) {
+                var markerOptions = {
+                    position: new __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["d" /* LatLng */](parseFloat(marker.Latitude), parseFloat(marker.Longitude)),
+                    icon: "assets/images/icons8-Marker-64.png"
+                };
+                var infoWindow = new __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["c" /* HtmlInfoWindow */]();
+                infoWindow.setContent("<div style=\"width:250px;\">\n<p><strong>" + marker.Title + "</strong></p> \n<p style=\"width: 300px;\"><img src=\"" + marker.Img + "\" style=\"float:left; vertical-align: text-top; width:70px;\">" + marker.Text + "</p></div>");
+                map.addMarker(markerOptions).then(function (mapMarker) {
+                    var observable = mapMarker.on(__WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["b" /* GoogleMapsEvent */].MARKER_CLICK);
+                    observable.subscribe(function () {
+                        infoWindow.open(mapMarker);
+                    });
+                });
+            };
+            for (var _i = 0, _a = _this.map.Markers; _i < _a.length; _i++) {
+                var marker = _a[_i];
+                _loop_1(marker);
+            }
+            /*
+                  let markerOptions: MarkerOptions = {
+                    position: coordinates,
+                    icon: "assets/images/icons8-Marker-64.png",
+                    title: 'Our first POI'
+                  };
+            
+                  const marker = map.addMarker(markerOptions)
+                    .then((marker: Marker) => {
+                      marker.showInfoWindow();
+                    });*/
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_8" /* ViewChild */])('map'),
+        __metadata("design:type", Object)
+    ], TabMapPage.prototype, "element", void 0);
+    TabMapPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
+            selector: 'page-tab-map',template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tab-map\tab-map.html"*/'<ion-content>\n  <div #map style="height:100%; padding:0px;"></div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tab-map\tab-map.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_google_maps__["a" /* GoogleMaps */], __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["f" /* NavController */]])
+    ], TabMapPage);
+    return TabMapPage;
+}());
+
+//# sourceMappingURL=tab-map.js.map
+
+/***/ }),
+
 /***/ 162:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -275,8 +308,8 @@ var TabHomePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tab_content_tab_content__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tab_home_tab_home__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tab_map_tab_map__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tab_home_tab_home__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tab_map_tab_map__ = __webpack_require__(161);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -299,13 +332,18 @@ var TabsPage = /** @class */ (function () {
         this.pastTab = __WEBPACK_IMPORTED_MODULE_2__tab_content_tab_content__["a" /* TabContentPage */];
         this.mapTab = __WEBPACK_IMPORTED_MODULE_4__tab_map_tab_map__["a" /* TabMapPage */];
         this.page = navParams.data;
+        var markers = [];
+        var pastList = this.page.PastList.filter(function (item) { return item.Latitude !== "" && item.Longitude !== ""; });
+        var presentList = this.page.PresentList.filter(function (item) { return item.Latitude !== "" && item.Longitude !== ""; });
+        markers = pastList.concat(presentList);
+        this.page.Map.Markers = markers;
     }
     TabsPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad TabsPage');
     };
     TabsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tabs\tabs.html"*/'<!-- Page Header -->\n\n<ion-header>\n\n  <ion-navbar *ngIf="page" color="dark-blue">\n\n    <ion-title style="font-family:roboto sans-serif, Arima Madurai;">{{page.Title}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<!-- Page Content -->\n\n<ion-content padding *ngIf="page">\n\n  <ion-tabs tabsPlacement="bottom" color="dark-blue">\n\n    <ion-tab [root]="homeTab" [rootParams]="page.HomePage" tabTitle="{{\'TAB_ABOUT\' | translate}}"></ion-tab>\n\n    <ion-tab [root]="presentTab" [rootParams]="page.PresentList" tabTitle="{{ \'TAB_MEMORY\' | translate}}"></ion-tab>\n\n    <ion-tab [root]="pastTab" [rootParams]="page.PastList"  tabTitle="{{\'TAB_HISTORY\' | translate}}"></ion-tab>\n\n    <ion-tab [root]="mapTab" [rootParams]="page.Map"  tabTitle="{{\'TAB_MAP\' | translate}}"></ion-tab>\n\n  </ion-tabs>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tabs\tabs.html"*/,
+            selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tabs\tabs.html"*/'<!-- Page Header -->\n<ion-header>\n  <ion-navbar *ngIf="page" color="dark-blue">\n    <ion-title style="font-family:Coda;">{{page.Title}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<!-- Page Content -->\n<ion-content padding *ngIf="page">\n  <ion-tabs tabsPlacement="bottom" color="dark-blue" style="font-family: Coda;">\n    <ion-tab [root]="homeTab" [rootParams]="page.HomePage" tabTitle="{{\'TAB_ABOUT\' | translate}}"></ion-tab>\n    <ion-tab [root]="presentTab" [rootParams]="page.PresentList" tabTitle="{{ \'TAB_MEMORY\' | translate}}"></ion-tab>\n    <ion-tab [root]="pastTab" [rootParams]="page.PastList"  tabTitle="{{\'TAB_HISTORY\' | translate}}"></ion-tab>\n    <ion-tab [root]="mapTab" [rootParams]="page.Map"  tabTitle="{{\'TAB_MAP\' | translate}}"></ion-tab>\n  </ion-tabs>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\tabs\tabs.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], TabsPage);
@@ -346,11 +384,11 @@ var map = {
 		3
 	],
 	"../pages/tab-home/tab-home.module": [
-		687,
+		686,
 		2
 	],
 	"../pages/tab-map/tab-map.module": [
-		686,
+		687,
 		1
 	],
 	"../pages/tabs/tabs.module": [
@@ -415,7 +453,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\home\home.html"*/'<!-- Page Header -->\n\n<ion-header>\n\n  <ion-navbar color="dark-blue">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title style="font-family: roboto sans-serif, Arima Madurai;">{{\'APP_TITLE\' | translate}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<!-- Page Content -->\n\n<ion-content *ngIf="content">\n\n    <img src={{content.Img}}>\n\n  <h4 style="padding-left: 16px; padding-right: 16px;">{{content.Title}}</h4>\n\n  <p style="padding-left: 16px; padding-right: 16px;">{{content.Text}}</p>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\home\home.html"*/'<!-- Page Header -->\n<ion-header>\n  <ion-navbar color="dark-blue">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title style="font-family:Coda;">{{\'APP_TITLE\' | translate}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<!-- Page Content -->\n<ion-content class="bg" *ngIf="content">\n    <img src={{content.Img}}>\n  <h4 style="padding-left: 16px; padding-right: 16px; font-family: Coda;">{{content.Title}}</h4>\n  <p style="padding-left: 16px; padding-right: 16px; font-family: Roboto;">{{content.Text}}</p>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_umbraco_service_umbraco_service__["a" /* UmbracoServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */]])
     ], HomePage);
@@ -452,19 +490,19 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(400);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(262);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_tab_content_tab_content__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_tab_home_tab_home__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_tab_home_tab_home__ = __webpack_require__(160);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(260);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(261);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_launch_navigator__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_launch_navigator__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_umbraco_service_umbraco_service__ = __webpack_require__(147);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_mock_service_mock_service__ = __webpack_require__(681);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common_http__ = __webpack_require__(148);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_settings_settings__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ngx_translate_core__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ngx_translate_http_loader__ = __webpack_require__(682);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_tab_map_tab_map__ = __webpack_require__(160);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_google_maps__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_tab_map_tab_map__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_google_maps__ = __webpack_require__(220);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -513,8 +551,8 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tab-content/tab-content.module#TabContentPageModule', name: 'TabContentPage', segment: 'tab-content', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tab-map/tab-map.module#TabMapPageModule', name: 'TabMapPage', segment: 'tab-map', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tab-home/tab-home.module#TabHomePageModule', name: 'TabHomePage', segment: 'tab-home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tab-map/tab-map.module#TabMapPageModule', name: 'TabMapPage', segment: 'tab-map', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -622,7 +660,7 @@ var MyApp = /** @class */ (function () {
             _this.statusBar.styleDefault();
             setTimeout(function () {
                 _this.splashScreen.hide();
-            }, 500);
+            }, 100);
         });
     };
     MyApp.prototype.startApp = function () {
@@ -645,7 +683,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\app\app.html"*/'\n\n<ion-menu [content]="content">\n\n  <ion-header>\n\n    <ion-toolbar color="dark-blue">\n\n      <div class="row">\n\n      <ion-title style="font-family: roboto sans-serif, Arima Madurai;">{{\'LOCATION\' | translate}}</ion-title>\n\n      <button icon-only (click)="presentPopover($event)" style="background-color: transparent;">\n\n        <div *ngIf="chosenLang == \'da\'">\n\n          <img style="width: 2.4em;" src="assets/icon/daEn.png">\n\n        </div>\n\n        <div *ngIf="chosenLang == \'en\'">\n\n          <img style="width: 2.4em;" src="assets/icon/enDa.png">\n\n        </div>\n\n      </button>\n\n      </div>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n  <ion-content>\n\n    <ion-list>\n\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n        {{p.title}}\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\app\app.html"*/'\n<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar color="dark-blue">\n      <div class="row">\n      <ion-title style="font-family: Coda;">{{\'LOCATION\' | translate}}</ion-title>\n      <!--<button icon-only (click)="presentPopover($event)" style="background-color: transparent;">\n        <div *ngIf="chosenLang == \'da\'">\n          <img style="width: 2.4em;" src="assets/icon/daEn.png">\n        </div>\n        <div *ngIf="chosenLang == \'en\'">\n          <img style="width: 2.4em;" src="assets/icon/enDa.png">\n        </div>\n      </button>-->\n      </div>\n    </ion-toolbar>\n  </ion-header>\n  <ion-content style="background-color: #193441;">\n    <ion-list>\n      <button color="dark-blue" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"C:\Users\Jeane\Documents\Github\Ionic\EsbjergHavn\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_5__providers_umbraco_service_umbraco_service__["a" /* UmbracoServiceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* PopoverController */], __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__["c" /* TranslateService */]])
     ], MyApp);
